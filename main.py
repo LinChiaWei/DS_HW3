@@ -89,7 +89,7 @@ if __name__ == "__main__":
     if cons_all > gen_all:
         need = cons_all-gen_all
         average = need / gen_data.shape[0]
-        average = average / 4
+        average = average / 2
         for i in range(24):
             hour = time[i] 
             data = data.append({"time":hour,"action":"sell","target_price":2,"target_volume":average},ignore_index=True)
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     else:
         need = gen_all-cons_all
         average = need / gen_data.shape[0]
-        average = average / 4
+        average = average / 2
         for i in range(24):
             hour = time[i] 
             data = data.append({"time":hour,"action":"sell","target_price":2,"target_volume":average},ignore_index=True)
