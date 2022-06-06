@@ -92,20 +92,18 @@ if __name__ == "__main__":
         average = average / 4
         for i in range(24):
             hour = time[i] 
-            data = data.append({"time":hour,"action":"buy","target_price":2,"target_volume":average},ignore_index=True)
-            data = data.append({"time":hour,"action":"sell","target_price":2.44,"target_volume":average},ignore_index=True)
-            data = data.append({"time":hour,"action":"buy","target_price":2,"target_volume":average},ignore_index=True)
-            data = data.append({"time":hour,"action":"sell","target_price":2.53,"target_volume":average},ignore_index=True)
+            data = data.append({"time":hour,"action":"sell","target_price":2,"target_volume":average},ignore_index=True)
+            data = data.append({"time":hour,"action":"sell","target_price":1.9,"target_volume":average},ignore_index=True)
+
     else:
         need = gen_all-cons_all
         average = need / gen_data.shape[0]
         average = average / 4
         for i in range(24):
             hour = time[i] 
-            data = data.append({"time":hour,"action":"buy","target_price":2,"target_volume":average},ignore_index=True)
-            data = data.append({"time":hour,"action":"sell","target_price":2.44,"target_volume":average},ignore_index=True)
-            data = data.append({"time":hour,"action":"buy","target_price":2,"target_volume":average},ignore_index=True)
-            data = data.append({"time":hour,"action":"sell","target_price":2.53,"target_volume":average},ignore_index=True)
+            data = data.append({"time":hour,"action":"sell","target_price":2,"target_volume":average},ignore_index=True)
+            data = data.append({"time":hour,"action":"sell","target_price":1.9,"target_volume":average},ignore_index=True)
+
 
     ###
 
